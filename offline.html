@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آفلاین - محاسبه‌گر آسیاب گلوله‌ای</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .offline-container {
+            max-width: 500px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .offline-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+        
+        .offline-icon svg {
+            width: 60px;
+            height: 60px;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: white;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .description {
+            font-size: 16px;
+            margin-bottom: 40px;
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+        
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .retry-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: inherit;
+        }
+        
+        .retry-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cache-status {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .cache-status h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #fbbf24;
+        }
+        
+        .cache-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            text-align: right;
+        }
+        
+        .cache-item {
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .cache-item.available {
+            color: #10b981;
+        }
+        
+        .cache-item.unavailable {
+            color: #ef4444;
+            opacity: 0.6;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: currentColor;
+        }
+        
+        .tips {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            text-align: right;
+        }
+        
+        .tips h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #93c5fd;
+        }
+        
+        .tips ul {
+            list-style: none;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .tips li {
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+        
+        .tips li::before {
+            content: "•";
+            color: #60a5fa;
+            margin-left: 8px;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { 
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% { 
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .offline-container {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .subtitle {
+                font-size: 16px;
+            }
+            
+            .cache-items {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Connection status indicator */
+        .connection-status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .connection-status.offline {
+            background: rgba(239, 68, 68, 0.9);
+            color: white;
+        }
+        
+        .connection-status.online {
+            background: rgba(16, 185, 129, 0.9);
+            color: white;
+        }
+        
+        /* Dark mode adjustments */
+        @media (prefers-color-scheme: dark) {
+            .offline-container {
+                background: rgba(0, 0, 0, 0.3);
+                border-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="connection-status" id="connectionStatus">
+        <span class="status-dot"></span>
+        <span id="statusText">بررسی اتصال...</span>
+    </div>
+
+    <div class="offline-container">
+        <div class="offline-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/>
+            </svg>
+        </div>
+        
+        <h1>شما آفلاین هستید</h1>
+        
+        <p class="subtitle">
+            اتصال اینترنت شما قطع شده است
+        </p>
+        
+        <p class="description">
+            نگران نباشید! محاسبه‌گر آسیاب گلوله‌ای برای کار آفلاین طراحی شده است. 
+            بخش‌هایی از برنامه همچنان در دسترس شماست.
+        </p>
+        
+        <div class="actions">
+            <button class="retry-btn" onclick="checkConnection()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 4 23 10 17 10"/>
+                    <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+                </svg>
+                تلاش مجدد برای اتصال
+            </button>
+            
+            <a href="/" class="retry-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9,22 9,12 15,12 15,22"/>
+                </svg>
+                بازگشت به صفحه اصلی
+            </a>
+        </div>
+        
+        <div class="cache-status">
+            <h3>وضعیت دسترسی آفلاین</h3>
+            <div class="cache-items">
+                <div class="cache-item available">
+                    <span class="status-dot"></span>
+                    محاسبه‌گر اصلی
+                </div>
+                <div class="cache-item available">
+                    <span class="status-dot"></span>
+                    پایگاه داده مواد
+                </div>
+                <div class="cache-item available">
+                    <span class="status-dot"></span>
+                    فرمول‌های مهندسی
+                </div>
+                <div class="cache-item unavailable">
+                    <span class="status-dot"></span>
+                    به‌روزرسانی‌های آنلاین
+                </div>
+            </div>
+        </div>
+        
+        <div class="tips">
+            <h3>نکات مفید:</h3>
+            <ul>
+                <li>تمام محاسبات محلی انجام می‌شوند</li>
+                <li>داده‌های شما در مرورگر ذخیره می‌شوند</li>
+                <li>با بازگشت اتصال، همه چیز همگام خواهد شد</li>
+                <li>گزارش‌ها را می‌توانید آفلاین تولید کنید</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Connection status monitoring
+        function updateConnectionStatus() {
+            const status = navigator.onLine;
+            const statusElement = document.getElementById('connectionStatus');
+            const statusText = document.getElementById('statusText');
+            
+            if (status) {
+                statusElement.className = 'connection-status online';
+                statusText.textContent = 'آنلاین';
+                // Auto redirect when back online
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 2000);
+            } else {
+                statusElement.className = 'connection-status offline';
+                statusText.textContent = 'آفلاین';
+            }
+        }
+        
+        function checkConnection() {
+            if (navigator.onLine) {
+                window.location.href = '/';
+            } else {
+                // Show feedback
+                const button = document.querySelector('.retry-btn');
+                const originalText = button.innerHTML;
+                button.innerHTML = `
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="8" x2="12" y2="12"/>
+                        <line x1="12" y1="16" x2="12.01" y2="16"/>
+                    </svg>
+                    همچنان آفلاین هستید
+                `;
+                button.style.background = 'rgba(239, 68, 68, 0.3)';
+                button.style.borderColor = 'rgba(239, 68, 68, 0.5)';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = 'rgba(255, 255, 255, 0.2)';
+                    button.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+                }, 2000);
+            }
+        }
+        
+        // Listen for connection changes
+        window.addEventListener('online', updateConnectionStatus);
+        window.addEventListener('offline', updateConnectionStatus);
+        
+        // Initial check
+        updateConnectionStatus();
+        
+        // Service worker communication
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.addEventListener('message', event => {
+                if (event.data.type === 'CACHE_UPDATED') {
+                    // Update cache status
+                    location.reload();
+                }
+            });
+        }
+        
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            // R key to retry
+            if (e.key === 'r' || e.key === 'R') {
+                e.preventDefault();
+                checkConnection();
+            }
+            // H key to go home
+            if (e.key === 'h' || e.key === 'H') {
+                e.preventDefault();
+                window.location.href = '/';
+            }
+        });
+        
+        // Auto-retry every 30 seconds
+        setInterval(() => {
+            if (navigator.onLine) {
+                window.location.href = '/';
+            }
+        }, 30000);
+        
+        console.log('Ball Mill Calculator - Offline Mode');
+        console.log('Press R to retry connection, H to go home');
+    </script>
+</body>
+</html>

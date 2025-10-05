@@ -1,0 +1,154 @@
+{
+  "name": "محاسبه‌گر آسیاب گلوله‌ای حرفه‌ای",
+  "short_name": "آسیاب کالکولاتور",
+  "description": "ابزار تخصصی طراحی و محاسبه آسیاب گلوله‌ای برای مهندسان معدن و صنایع مرتبط",
+  "version": "1.0.0",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#3B82F6",
+  "background_color": "#F8FAFC",
+  "lang": "fa",
+  "dir": "rtl",
+  "categories": ["productivity", "engineering", "utilities"],
+  "keywords": ["ball mill", "آسیاب گلوله ای", "mining engineering", "مهندسی معدن", "calculator", "محاسبه گر"],
+  
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iNzIiIHZpZXdCb3g9IjAgMCA3MiA3MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzYiIGN5PSIzNiIgcj0iMzIiIGZpbGw9IiMzQjgyRjYiLz4KPGNpcmNsZSBjeD0iMzYiIGN5PSIzNiIgcj0iMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSIyOCIgY3k9IjI4IiByPSI0IiBmaWxsPSJ3aGl0ZSIvPgo8Y2lyY2xlIGN4PSI0NCIgY3k9IjI4IiByPSI0IiBmaWxsPSJ3aGl0ZSIvPgo8Y2lyY2xlIGN4PSIzNiIgY3k9IjQ0IiByPSI0IiBmaWxsPSJ3aGl0ZSIvPgo8Y2lyY2xlIGN4PSIyMiIgY3k9IjM2IiByPSIzIiBmaWxsPSJ3aGl0ZSIvPgo8Y2lyY2xlIGN4PSI1MCIgY3k9IjM2IiByPSIzIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K",
+      "sizes": "72x72",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNDgiIGN5PSI0OCIgcj0iNDAiIGZpbGw9IiMzQjgyRjYiLz4KPGNpcmNsZSBjeD0iNDgiIGN5PSI0OCIgcj0iMzIiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSIzNiIgY3k9IjM2IiByPSI2IiBmaWxsPSJ3aGl0ZSIvPgo8Y2lyY2xlIGN4PSI2MCIgY3k9IjM2IiByPSI2IiBmaWxsPSJ3aGl0ZSIvPgo8Y2lyY2xlIGN4PSI0OCIgY3k9IjYwIiByPSI2IiBmaWxsPSJ3aGl0ZSIvPgo8Y2lyY2xlIGN4PSIyOCIgY3k9IjQ4IiByPSI0IiBmaWxsPSJ3aGl0ZSIvPgo8Y2lyY2xlIGN4PSI2OCIgY3k9IjQ4IiByPSI0IiBmaWxsPSJ3aGl0ZSIvPgo8Y2lyY2xlIGN4PSI0OCIgY3k9IjI4IiByPSI0IiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K",
+      "sizes": "96x96",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjY0IiBjeT0iNjQiIHI9IjU2IiBmaWxsPSIjM0I4MkY2Ii8+CjxjaXJjbGUgY3g9IjY0IiBjeT0iNjQiIHI9IjQ0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjQiLz4KPGNpcmNsZSBjeD0iNDgiIGN5PSI0OCIgcj0iOCIgZmlsbD0id2hpdGUiLz4KPGNPCMXIDY3g9IjgwIiBjeT0iNDgiIHI9IjgiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjY0IiBjeT0iODAiIHI9IjgiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjM2IiBjeT0iNjQiIHI9IjYiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjkyIiBjeT0iNjQiIHI9IjYiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjY0IiBjeT0iMzYiIHI9IjYiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=",
+      "sizes": "128x128",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iMjQiIGZpbGw9IiMzQjgyRjYiLz4KPGNpcmNsZSBjeD0iOTYiIGN5PSI5NiIgcj0iNzIiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNiIvPgo8Y2lyY2xlIGN4PSI3MiIgY3k9IjcyIiByPSIxMiIgZmlsbD0id2hpdGUiLz4KPGNPCMXIDY3g9IjEyMCIgY3k9IjcyIiByPSIxMiIgZmlsbD0id2hpdGUiLz4KPGNPCMXIDY3g9Ijk2IiBjeT0iMTIwIiByPSIxMiIgZmlsbD0id2hpdGUiLz4KPGNPCMXIDY3g9IjUyIiBjeT0iOTYiIHI9IjgiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjE0MCIgY3k9Ijk2IiByPSI4IiBmaWxsPSJ3aGl0ZSIvPgo8Y2lyY2xlIGN4PSI5NiIgY3k9IjUyIiByPSI4IiBmaWxsPSJ3aGl0ZSIvPgo8Y2lyY2xlIGN4PSI3NiIgY3k9IjExNiIgcj0iNiIgZmlsbD0id2hpdGUiLz4KPGNPCMXIDY3g9IjExNiIgY3k9IjExNiIgcj0iNiIgZmlsbD0id2hpdGUiLz4KPGNPCMXIDY3g9Ijc2IiBjeT0iNzYiIHI9IjYiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjExNiIgY3k9Ijc2IiByPSI2IiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iNjQiIGZpbGw9IiMzQjgyRjYiLz4KPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjU2IiByPSIxOTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMTIiLz4KPGNPCMXIDY3g9IjE5MiIgY3k9IjE5MiIgcj0iMzIiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjMyMCIgY3k9IjE5MiIgcj0iMzIiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjI1NiIgY3k9IjMyMCIgcj0iMzIiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjEzNiIgY3k9IjI1NiIgcj0iMjQiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjM3NiIgY3k9IjI1NiIgcj0iMjQiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjI1NiIgY3k9IjEzNiIgcj0iMjQiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjE2OCIgY3k9IjM0NCIgcj0iMTYiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjM0NCIgY3k9IjM0NCIgcj0iMTYiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjE2OCIgY3k9IjE2OCIgcj0iMTYiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjM0NCIgY3k9IjE2OCIgcj0iMTYiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjIyNCIgY3k9IjI4OCIgcj0iMTIiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjI4OCIgY3k9IjI4OCIgcj0iMTIiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjIyNCIgY3k9IjIyNCIgcj0iMTIiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjI4OCIgY3k9IjIyNCIgcj0iMTIiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  
+  "shortcuts": [
+    {
+      "name": "محاسبه‌گر جدید",
+      "short_name": "محاسبه جدید",
+      "description": "شروع محاسبه جدید آسیاب",
+      "url": "/?shortcut=new-calculation",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiByeD0iMTIiIGZpbGw9IiMxMEI5ODEiLz4KPHBhdGggZD0iTTQ4IDI0VjcyTTI0IDQ4SDcyIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "پایگاه داده مواد",
+      "short_name": "مواد",
+      "description": "دسترسی به پایگاه داده مواد",
+      "url": "/?shortcut=materials",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiByeD0iMTIiIGZpbGw9IiNGNTk3MDAiLz4KPHJlY3QgeD0iMjQiIHk9IjI0IiB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIiByeD0iNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIi8+CjxyZWN0IHg9IjMyIiB5PSIzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjQiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjMyIiB5PSI0MCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjQiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjMyIiB5PSI0OCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjQiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjMyIiB5PSI1NiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjQiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "گزارش‌ها",
+      "short_name": "گزارش",
+      "description": "مشاهده و تولید گزارش‌ها",
+      "url": "/?shortcut=reports",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiByeD0iMTIiIGZpbGw9IiM3QzNBRUQiLz4KPHJlY3QgeD0iMjQiIHk9IjE2IiB3aWR0aD0iNDgiIGhlaWdodD0iNjQiIHJ4PSI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiLz4KPGxpbmUgeDE9IjMyIiB5MT0iMzIiIHgyPSI2NCIgeTI9IjMyIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPGxpbmUgeDE9IjMyIiB5MT0iNDAiIHgyPSI1NiIgeTI9IjQwIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPGxpbmUgeDE9IjMyIiB5MT0iNDgiIHgyPSI2MCIgeTI9IjQ4IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPGxpbmUgeDE9IjMyIiB5MT0iNTYiIHgyPSI1MiIgeTI9IjU2IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cg==",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTQwIiBoZWlnaHQ9Ijk2MCIgdmlld0JveD0iMCAwIDU0MCA5NjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1NDAiIGhlaWdodD0iOTYwIiBmaWxsPSIjRjhGQUZDIi8+CjxyZWN0IHk9IjAiIHdpZHRoPSI1NDAiIGhlaWdodD0iMTIwIiBmaWxsPSIjM0I4MkY2Ii8+Cjx0ZXh0IHg9IjI3MCIgeT0iNzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiPtmF2K3Yp9iz2KjZh+KAjNqv2LEg2KLYs9uM2KfYqDwvdGV4dD4KPHJlY3QgeD0iMjAiIHk9IjE2MCIgd2lkdGg9IjUwMCIgaGVpZ2h0PSIzMDAiIHJ4PSIxMiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iI0UyRThGMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9IjQwIiB5PSIyMDAiIHdpZHRoPSI0NjAiIGhlaWdodD0iNDAiIHJ4PSI4IiBmaWxsPSIjRjNGNEY2Ii8+CjxyZWN0IHg9IjQwIiB5PSIyNjAiIHdpZHRoPSI0NjAiIGhlaWdodD0iNDAiIHJ4PSI4IiBmaWxsPSIjRjNGNEY2Ii8+CjxyZWN0IHg9IjQwIiB5PSIzMjAiIHdpZHRoPSI0NjAiIGhlaWdodD0iNDAiIHJ4PSI4IiBmaWxsPSIjRjNGNEY2Ii8+CjxyZWN0IHg9IjQwIiB5PSIzODAiIHdpZHRoPSI0NjAiIGhlaWdodD0iNjAiIHJ4PSI4IiBmaWxsPSIjM0I4MkY2IiBmaWxsLW9wYWNpdHk9IjAuMSIvPgo8L3N2Zz4K",
+      "sizes": "540x960",
+      "type": "image/svg+xml",
+      "form_factor": "narrow",
+      "label": "صفحه اصلی محاسبه‌گر"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAyNCIgaGVpZ2h0PSI3NjgiIHZpZXdCb3g9IjAgMCAxMDI0IDc2OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEwMjQiIGhlaWdodD0iNzY4IiBmaWxsPSIjRjhGQUZDIi8+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjgwIiBmaWxsPSIjM0I4MkY2Ii8+Cjx0ZXh0IHg9IjUxMiIgeT0iNTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIyOCIgZm9udC13ZWlnaHQ9ImJvbGQiPtmF2K3Yp9iz2KjZh+KAjNqv2LEg2KLYs9uM2KfYqCDar9mE2YjZhOKAjNin24w8L3RleHQ+CjxyZWN0IHg9IjQwIiB5PSIxMjAiIHdpZHRoPSI0NjAiIGhlaWdodD0iNjAwIiByeD0iMTIiIGZpbGw9IndoaXRlIiBzdHJva2U9IiNFMkU4RjAiIHN0cm9rZS13aWR0aD0iMiIvPgo8cmVjdCB4PSI1MjQiIHk9IjEyMCIgd2lkdGg9IjQ2MCIgaGVpZ2h0PSI2MDAiIHJ4PSIxMiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iI0UyRThGMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9IjU2MCIgeT0iMTgwIiB3aWR0aD0iMzg4IiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzNDNEI2NCIgZmlsbC1vcGFjaXR5PSIwLjEiLz4KPC9zdmc+Cg==",
+      "sizes": "1024x768",
+      "type": "image/svg+xml", 
+      "form_factor": "wide",
+      "label": "رابط کاربری دسکتاپ"
+    }
+  ],
+  
+  "related_applications": [],
+  
+  "prefer_related_applications": false,
+  
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  
+  "handle_links": "preferred",
+  
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  
+  "protocol_handlers": [
+    {
+      "protocol": "web+ballmill",
+      "url": "/?calculation=%s"
+    }
+  ],
+  
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text", 
+      "url": "url",
+      "files": [
+        {
+          "name": "calculation_file",
+          "accept": [".json", ".csv", ".txt"]
+        }
+      ]
+    }
+  },
+  
+  "file_handlers": [
+    {
+      "action": "/open-calculation",
+      "accept": {
+        "application/json": [".json"],
+        "text/csv": [".csv"],
+        "text/plain": [".txt"]
+      }
+    }
+  ]
+}
